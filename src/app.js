@@ -4,7 +4,7 @@ import AppRouter from './routers/AppRouter';
 
 import {Provider} from 'react-redux';
 
-import configStore from './store/configStore';
+import configStore from './store/config-store';
 import { addExpense } from './actions/expenses';
 import { setTextFilter } from './actions/filters';
 

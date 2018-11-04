@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --config=jest.config.json",
-    "build": "webpack",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
     "dev-server": "webpack-dev-server --open",
-    "start":"node server/server.js",
-    "heroku-postbuild": "build"
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm run build"
   },
   "author": "",
   "license": "ISC",
