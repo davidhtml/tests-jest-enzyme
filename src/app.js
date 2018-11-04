@@ -20,5 +20,7 @@ const jsx = (
     </Provider>
 )
 
+//irrelevant
+
 // ReactDOM.render(<AppRouter />, document.querySelector('#root'));
 ReactDOM.render(jsx, document.querySelector('#root'));
