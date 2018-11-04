@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header correctly 1`] = `
+<header>
+  <h1>
+    Expensify.React App
+  </h1>
+  <p>
+    Short description
+  </p>
+  <NavLink
+    activeClassName="selected"
+    activeStyle={
+      Object {
+        "color": "#199",
+        "fontWeight": "bold",
+      }
+    }
+    aria-current="page"
+    exact={true}
+    to="/"
+  >
+    Home
+  </NavLink>
+   
+  <br />
+  <NavLink
+    activeClassName="selected"
+    activeStyle={
+      Object {
+        "color": "#199",
+        "fontWeight": "bold",
+      }
+    }
+    aria-current="page"
+    exact={true}
+    to="/create"
+  >
+    Create expense
+  </NavLink>
+   
+  <br />
+  <NavLink
+    activeClassName="selected"
+    activeStyle={
+      Object {
+        "color": "#199",
+        "fontWeight": "bold",
+      }
+    }
+    aria-current="page"
+    exact={true}
+    to="/help"
+  >
+    Help
+  </NavLink>
+   
+  <br />
+</header>
+`;
