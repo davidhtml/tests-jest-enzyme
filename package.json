@@ -6,7 +6,9 @@
   "scripts": {
     "test": "jest --config=jest.config.json",
     "build": "webpack",
-    "dev-server": "webpack-dev-server --open"
+    "dev-server": "webpack-dev-server --open",
+    "start":"node server/server.js",
+    "heroku-postbuild": "build"
   },
   "author": "",
   "license": "ISC",
@@ -37,6 +39,7 @@
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
+    "express": "^4.16.4",
     "moment": "^2.22.2",
     "react": "^16.6.0",
     "react-dates": "^18.2.0",

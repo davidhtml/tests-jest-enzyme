@@ -68964,11 +68964,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_configStore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./store/configStore */ "./src/store/configStore.js");
 /* harmony import */ var _actions_expenses__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./actions/expenses */ "./src/actions/expenses.js");
 /* harmony import */ var _actions_filters__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./actions/filters */ "./src/actions/filters.js");
-/* harmony import */ var _selectors_expenses__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./selectors/expenses */ "./src/selectors/expenses.js");
-/* harmony import */ var normalize_css_normalize_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! normalize.css/normalize.css */ "./node_modules/normalize.css/normalize.css");
-/* harmony import */ var normalize_css_normalize_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(normalize_css_normalize_css__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./styles/styles.scss */ "./src/styles/styles.scss");
-/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_scss__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var normalize_css_normalize_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! normalize.css/normalize.css */ "./node_modules/normalize.css/normalize.css");
+/* harmony import */ var normalize_css_normalize_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(normalize_css_normalize_css__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./styles/styles.scss */ "./src/styles/styles.scss");
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_scss__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react_dates_lib_css_datepicker_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-dates/lib/css/_datepicker.css */ "./node_modules/react-dates/lib/css/_datepicker.css");
+/* harmony import */ var react_dates_lib_css_datepicker_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_dates_lib_css_datepicker_css__WEBPACK_IMPORTED_MODULE_9__);
 
 
 
@@ -68980,23 +68981,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var store = Object(_store_configStore__WEBPACK_IMPORTED_MODULE_4__["default"])();
-store.dispatch(Object(_actions_expenses__WEBPACK_IMPORTED_MODULE_5__["addExpense"])({
-  description: 'water bill',
-  amount: 4500
-}));
-store.dispatch(Object(_actions_expenses__WEBPACK_IMPORTED_MODULE_5__["addExpense"])({
-  description: 'gas bill',
-  createdAt: 1000
-}));
-store.dispatch(Object(_actions_expenses__WEBPACK_IMPORTED_MODULE_5__["addExpense"])({
-  description: 'rent',
-  amount: 109500
-})); // console.log(getVisibleExpenses(store.getState().expenses, store.getState().filters))
-// console.log(store.getState());
-
 var jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_3__["Provider"], {
   store: store
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_routers_AppRouter__WEBPACK_IMPORTED_MODULE_2__["default"], null)); // ReactDOM.render(<AppRouter />, document.querySelector('#root'));
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_routers_AppRouter__WEBPACK_IMPORTED_MODULE_2__["default"], null)); //irrelevant
+// ReactDOM.render(<AppRouter />, document.querySelector('#root'));
 
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(jsx, document.querySelector('#root'));
 
@@ -69006,32 +68994,85 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(jsx, document.querySelec
 /*!******************************************!*\
   !*** ./src/components/AddExpensePage.js ***!
   \******************************************/
-/*! exports provided: default */
+/*! exports provided: AddExpensePage, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddExpensePage", function() { return AddExpensePage; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _ExpenseForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ExpenseForm */ "./src/components/ExpenseForm.js");
 /* harmony import */ var _actions_expenses__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../actions/expenses */ "./src/actions/expenses.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
 
 
 
-var AddExpensePage = function AddExpensePage(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Add expense"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ExpenseForm__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    stateObjToParent: function stateObjToParent(expense) {
-      console.log(props);
-      props.dispatch(Object(_actions_expenses__WEBPACK_IMPORTED_MODULE_3__["addExpense"])(expense));
-      props.history.push('/');
+
+var AddExpensePage =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(AddExpensePage, _React$Component);
+
+  function AddExpensePage() {
+    var _getPrototypeOf2;
+
+    var _temp, _this;
+
+    _classCallCheck(this, AddExpensePage);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
     }
-  }));
+
+    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(AddExpensePage)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.onSubmit = function (expense) {
+      _this.props.addExpense(expense);
+
+      _this.props.history.push('/');
+    }, _temp));
+  }
+
+  _createClass(AddExpensePage, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Add expense"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ExpenseForm__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        stateObjToParent: this.onSubmit
+      }));
+    }
+  }]);
+
+  return AddExpensePage;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    addExpense: function addExpense(expense) {
+      return dispatch(Object(_actions_expenses__WEBPACK_IMPORTED_MODULE_3__["addExpense"])(expense));
+    }
+  };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])()(AddExpensePage));
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(undefined, mapDispatchToProps)(AddExpensePage));
 
 /***/ }),
 
@@ -69039,50 +69080,109 @@ var AddExpensePage = function AddExpensePage(props) {
 /*!*******************************************!*\
   !*** ./src/components/EditExpensePage.js ***!
   \*******************************************/
-/*! exports provided: default */
+/*! exports provided: EditExpensePage, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditExpensePage", function() { return EditExpensePage; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions_expenses__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions/expenses */ "./src/actions/expenses.js");
 /* harmony import */ var _ExpenseForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ExpenseForm */ "./src/components/ExpenseForm.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
 
 
+ //refactor to class bsaed compoennt
+// create mapDispatchToProps
+//should render addExpense page
+// should handle editExpense using spies
+//should handle removeExpense using spies
 
-var EditExpensePage = function EditExpensePage(props) {
-  var expenses = props.expenses,
-      match = props.match;
-  var existingExpense = expenses.find(function (expense) {
-    return expense.id === match.params.id;
-  });
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ExpenseForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    stateObjToParent: function stateObjToParent(expense) {
-      props.dispatch(Object(_actions_expenses__WEBPACK_IMPORTED_MODULE_2__["editExpense"])(match.params.id, expense));
-      props.history.push('/');
-    },
-    existingExpense: existingExpense
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    onClick: function onClick() {
-      props.dispatch(Object(_actions_expenses__WEBPACK_IMPORTED_MODULE_2__["removeExpense"])({
-        id: match.params.id
-      }));
-      props.history.push('/');
+var EditExpensePage =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(EditExpensePage, _React$Component);
+
+  function EditExpensePage() {
+    var _getPrototypeOf2;
+
+    var _temp, _this;
+
+    _classCallCheck(this, EditExpensePage);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
     }
-  }, "Remove expense"));
-};
 
-var mapStateToProps = function mapStateToProps(state) {
+    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(EditExpensePage)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.onEditExpense = function (expense) {
+      _this.props.editExpense(_this.props.expense.id, expense);
+
+      _this.props.history.push('/');
+    }, _this.onRemove = function () {
+      _this.props.removeExpense({
+        id: _this.props.expense.id
+      });
+
+      _this.props.history.push('/');
+    }, _temp));
+  }
+
+  _createClass(EditExpensePage, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ExpenseForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        stateObjToParent: this.onEditExpense,
+        existingExpense: this.props.expense
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.onRemove
+      }, "Remove expense"));
+    }
+  }]);
+
+  return EditExpensePage;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapStateToProps = function mapStateToProps(state, props) {
   return {
-    expenses: state.expenses
+    expense: state.expenses.find(function (expense) {
+      return expense.id === props.match.params.id;
+    })
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(EditExpensePage));
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    editExpense: function editExpense(id, expense) {
+      return dispatch(Object(_actions_expenses__WEBPACK_IMPORTED_MODULE_2__["editExpense"])(id, expense));
+    },
+    removeExpense: function removeExpense(id) {
+      return dispatch(Object(_actions_expenses__WEBPACK_IMPORTED_MODULE_2__["removeExpense"])(id));
+    }
+  };
+};
+
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(EditExpensePage));
 
 /***/ }),
 
@@ -69128,8 +69228,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dates__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dates__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_dates_initialize__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dates/initialize */ "./node_modules/react-dates/initialize.js");
 /* harmony import */ var react_dates_initialize__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dates_initialize__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_dates_lib_css_datepicker_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-dates/lib/css/_datepicker.css */ "./node_modules/react-dates/lib/css/_datepicker.css");
-/* harmony import */ var react_dates_lib_css_datepicker_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_dates_lib_css_datepicker_css__WEBPACK_IMPORTED_MODULE_4__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -69152,9 +69250,6 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
-var date = moment__WEBPACK_IMPORTED_MODULE_1___default()();
-console.log(date.format('MMM Do, YYYY'));
 
 var ExpenseForm =
 /*#__PURE__*/
@@ -69211,8 +69306,6 @@ function (_React$Component) {
     };
 
     _this.onFocusChange = function (brazauskas) {
-      console.log(brazauskas);
-
       _this.setState(function () {
         return {
           calendarFocused: brazauskas.focused
@@ -69261,7 +69354,6 @@ function (_React$Component) {
   _createClass(ExpenseForm, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      console.log(this.props);
       var existingExpense = this.props.existingExpense;
 
       if (existingExpense) {
@@ -69320,11 +69412,12 @@ function (_React$Component) {
 /*!***************************************!*\
   !*** ./src/components/ExpenseList.js ***!
   \***************************************/
-/*! exports provided: default */
+/*! exports provided: ExpenseList, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExpenseList", function() { return ExpenseList; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
@@ -69338,7 +69431,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 var ExpenseList = function ExpenseList(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Expenses list "), props.expenses.map(function (expense) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.expenses.length === 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "You have no expenses") : props.expenses.map(function (expense) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ExpenseListItem__WEBPACK_IMPORTED_MODULE_2__["default"], _extends({
       key: expense.id
     }, expense));
@@ -69346,10 +69439,12 @@ var ExpenseList = function ExpenseList(props) {
 };
 
 var mapStateToProps = function mapStateToProps(state) {
+  console.log(state.filters);
   return {
     expenses: Object(_selectors_expenses__WEBPACK_IMPORTED_MODULE_3__["default"])(state.expenses, state.filters)
   };
 };
+
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(ExpenseList));
 ;
@@ -69360,11 +69455,12 @@ var mapStateToProps = function mapStateToProps(state) {
 /*!*********************************************!*\
   !*** ./src/components/ExpenseListFilter.js ***!
   \*********************************************/
-/*! exports provided: default */
+/*! exports provided: ExpenseListFilters, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExpenseListFilters", function() { return ExpenseListFilters; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
@@ -69373,8 +69469,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dates__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dates__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_dates_initialize__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-dates/initialize */ "./node_modules/react-dates/initialize.js");
 /* harmony import */ var react_dates_initialize__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_dates_initialize__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_dates_lib_css_datepicker_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-dates/lib/css/_datepicker.css */ "./node_modules/react-dates/lib/css/_datepicker.css");
-/* harmony import */ var react_dates_lib_css_datepicker_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_dates_lib_css_datepicker_css__WEBPACK_IMPORTED_MODULE_5__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -69392,7 +69486,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 
 
 
@@ -69419,15 +69512,27 @@ function (_React$Component) {
     return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(ExpenseListFilters)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.state = {
       calendarFocused: null
     }, _this.onDatesChange = function (obj) {
-      _this.props.dispatch(Object(_actions_filters__WEBPACK_IMPORTED_MODULE_2__["setStartDate"])(obj.startDate));
+      _this.props.setStartDate(obj.startDate);
 
-      _this.props.dispatch(Object(_actions_filters__WEBPACK_IMPORTED_MODULE_2__["setEndDate"])(obj.endDate));
+      _this.props.setEndDate(obj.endDate);
     }, _this.onFocusChange = function (calendarFocused) {
+      console.log(calendarFocused);
+
       _this.setState(function () {
         return {
           calendarFocused: calendarFocused
         };
       });
+    }, _this.onTextChange = function (e) {
+      _this.props.setTextFilter(e.target.value);
+    }, _this.onSortChange = function (e) {
+      var option = e.target.value;
+
+      if (option === 'date') {
+        _this.props.sortByDate();
+      } else if (option === 'amount') {
+        _this.props.sortByAmount();
+      }
     }, _temp));
   }
 
@@ -69439,20 +69544,10 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.props.filters.text,
-        onChange: function onChange(e) {
-          props.dispatch(Object(_actions_filters__WEBPACK_IMPORTED_MODULE_2__["setTextFilter"])(e.target.value));
-        }
+        onChange: this.onTextChange
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
         value: this.props.filters.sortBy,
-        onChange: function onChange(e) {
-          var option = e.target.value;
-
-          if (option === 'date') {
-            dispatch(Object(_actions_filters__WEBPACK_IMPORTED_MODULE_2__["sortByDate"])());
-          } else if (option === 'amount') {
-            dispatch(Object(_actions_filters__WEBPACK_IMPORTED_MODULE_2__["sortByAmount"])());
-          }
-        }
+        onChange: this.onSortChange
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         value: "date"
       }, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
@@ -69483,7 +69578,28 @@ var mapStateToProps = function mapStateToProps(state) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(ExpenseListFilters));
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    setTextFilter: function setTextFilter(text) {
+      return dispatch(Object(_actions_filters__WEBPACK_IMPORTED_MODULE_2__["setTextFilter"])(text));
+    },
+    sortByDate: function sortByDate() {
+      return dispatch(Object(_actions_filters__WEBPACK_IMPORTED_MODULE_2__["sortByDate"])());
+    },
+    sortByAmount: function sortByAmount() {
+      return dispatch(Object(_actions_filters__WEBPACK_IMPORTED_MODULE_2__["sortByAmount"])());
+    },
+    setStartDate: function setStartDate(startDate) {
+      return dispatch(Object(_actions_filters__WEBPACK_IMPORTED_MODULE_2__["setStartDate"])(startDate));
+    },
+    setEndDate: function setEndDate(endDate) {
+      return dispatch(Object(_actions_filters__WEBPACK_IMPORTED_MODULE_2__["setEndDate"])(endDate));
+    }
+  };
+};
+
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(ExpenseListFilters));
 
 /***/ }),
 
@@ -69536,7 +69652,7 @@ var activeNav = {
 };
 
 var Header = function Header() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Expensify.React App"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Expensify.React App"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Short description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     to: "/",
     activeClassName: "selected",
     activeStyle: activeNav,
@@ -69782,16 +69898,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_0__);
  //get visible expenses
 
-/* harmony default export */ __webpack_exports__["default"] = (function (expenses, _ref) {
-  var text = _ref.text,
-      sortBy = _ref.sortBy,
-      startDate = _ref.startDate,
-      endDate = _ref.endDate,
-      amount = _ref.amount;
+/* harmony default export */ __webpack_exports__["default"] = (function (expenses, filters) {
+  var text = filters.text,
+      sortBy = filters.sortBy,
+      startDate = filters.startDate,
+      endDate = filters.endDate;
   return expenses.filter(function (expense) {
-    var createdAtMoment = moment__WEBPACK_IMPORTED_MODULE_0___default()(expense.createdAt); // const startDateMatch = typeof startDate !== 'number' || expense.createdAt >= startDate;
-    // const endDateMatch = typeof endDate !== 'number' || expense.createdAt <= endDate;
-
+    var createdAtMoment = moment__WEBPACK_IMPORTED_MODULE_0___default()(expense.createdAt);
     var startDateMatch = startDate ? startDate.isSameOrBefore(createdAtMoment, 'day') : true;
     var endDateMatch = endDate ? endDate.isSameOrAfter(createdAtMoment, 'day') : true;
     var textMatch = expense.description.toLowerCase().includes(text.toLowerCase());

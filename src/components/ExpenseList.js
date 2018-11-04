@@ -7,7 +7,7 @@ const ExpenseList = (props) => (
     <div>
         {
             props.expenses.length === 0
-            ? ( <p>You have no expenses</p> ) 
+            ? ( <p>You have no expenses</p> )
             : (
                 props.expenses.map((expense) => {
                     return <ExpenseListItem key={expense.id} {...expense} />
@@ -20,7 +20,6 @@ const ExpenseList = (props) => (
 
 
 const mapStateToProps = (state) => {
-    console.log(state.filters)
     return {
         expenses: selectExpenses(state.expenses, state.filters)
     }
