@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should not render any expense if expenses are not provides 1`] = `
+<div>
+  <h4>
+    Here will be how many visible expenses we do have and what is total amount
+  </h4>
+</div>
+`;
+
+exports[`should render expenses correcntly 1`] = `
+<div>
+  <h4>
+    Here will be how many visible expenses we do have and what is total amount
+  </h4>
+  <p>
+    total of 
+    1
+     expenses to pay 
+    $1.95
+  </p>
+</div>
+`;
