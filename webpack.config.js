@@ -23,7 +23,7 @@ module.exports = {
 	},
     devServer: {
         contentBase: BUILD_PATH,
-        historyApiFallback: true
+        historyApiFallback: true,
     },
     module: {
         rules: [
@@ -54,5 +54,5 @@ module.exports = {
         })
     ],
     devtool: 'source-map',
-    mode: 'development'
+    mode: 'development',
 };

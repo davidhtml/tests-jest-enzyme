@@ -4,12 +4,13 @@ import thunk from 'redux-thunk';
 
 import expensesReducer from '../reducers/expenses';
 import filtersReducer from '../reducers/filters';
-
+import authReducer from '../reducers/auth';
 
 const middlewares = composeWithDevTools(applyMiddleware(thunk));
 const reducers = combineReducers({
     expenses: expensesReducer,
     filters: filtersReducer,
+    auth: authReducer
 })
 
 export default () => {

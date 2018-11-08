@@ -17,8 +17,7 @@ exports[`should render Header correctly 1`] = `
       }
     }
     aria-current="page"
-    exact={true}
-    to="/"
+    to="/dashboard"
   >
     Home
   </NavLink>
@@ -56,5 +55,10 @@ exports[`should render Header correctly 1`] = `
   </NavLink>
    
   <br />
+  <button
+    onClick={[Function]}
+  >
+    Log out
+  </button>
 </header>
 `;

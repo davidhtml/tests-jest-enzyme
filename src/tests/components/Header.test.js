@@ -3,10 +3,10 @@ import React from 'react';
 // import ShallowRenderer from 'react-test-renderer/shallow';
 import { shallow } from 'enzyme';
 // import toJSON from 'enzyme-to-json'
-import Header from '../../components/Header'
+import { Header } from '../../components/Header'
 
 test('should render Header correctly', () => {
-    const wrapper = shallow(<Header />);
+    const wrapper = shallow(<Header logOut={() => {}}/>);
     expect(wrapper).toMatchSnapshot();
     //TODO enzyme example
     // expect(wrapper.find('p').text()).toBe("Short description");
@@ -14,4 +14,12 @@ test('should render Header correctly', () => {
     // const renderer = new ShallowRenderer();
     // renderer.render(<Header />);
     // expect(renderer.getRenderOutput()).toMatchSnapshot();
+});
+
+
+test('should call start logout on logOut', () => {
+    const startLogOut = jest.fn();
+    const wrapper = shallow(<Header logOut={startLogOut}/>);
+    wrapper.find('button').simulate('click');
+    expect(startLogOut).toHaveBeenCalled();
 });
