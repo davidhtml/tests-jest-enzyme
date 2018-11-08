@@ -5,7 +5,7 @@ import AppRouter from './routers/AppRouter';
 import {Provider} from 'react-redux';
 
 import configStore from './store/config-store';
-import { addExpense } from './actions/expenses';
+import { startSetExpenses } from './actions/expenses';
 import { setTextFilter } from './actions/filters';
 
 import 'normalize.css/normalize.css';
@@ -23,5 +23,12 @@ const jsx = (
 
 //irrelevant
 
-// ReactDOM.render(<AppRouter />, document.querySelector('#root'));
-ReactDOM.render(jsx, document.querySelector('#root'));
+ReactDOM.render(<p>Loading...</p>, document.querySelector('#root'));
+
+store.dispatch(startSetExpenses())
+.then(() => {
+    ReactDOM.render(jsx, document.querySelector('#root'));
+})
+
+
+// ReactDOM.render(jsx, document.querySelector('#root'));

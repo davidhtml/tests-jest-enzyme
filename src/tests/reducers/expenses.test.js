@@ -82,8 +82,48 @@ test('should NOT edit expense if an id of the expense is not found', () => {
             description: 'GYM PLUS PLUS'
         }
     }
-
     const state = expensesReducer(expenses, action);
-
     expect(state).toEqual(expenses);
+});
+
+//
+test('should set expenses', () => {
+    const newExpenses = [
+        {
+            id: 'asdfasdf',
+            description: 'grikiu kose',
+            note: 'first note',
+            amount: 50,
+            createdAt: 500,
+        },
+        {
+            id: 'afasdfas',
+            description: 'kompotas',
+            note: 'second note',
+            amount: 33,
+            createdAt: 1000,
+        }
+    ]
+
+    const action = {
+        type: "SET_EXPENSES",
+        expenses: [
+            {
+                id: 'asdfasdf',
+                description: 'grikiu kose',
+                note: 'first note',
+                amount: 50,
+                createdAt: 500,
+            },
+            {
+                id: 'afasdfas',
+                description: 'kompotas',
+                note: 'second note',
+                amount: 33,
+                createdAt: 1000,
+            }
+        ]
+    }
+    const state = expensesReducer(expenses, action);
+    expect(state).toEqual(newExpenses)
 })
