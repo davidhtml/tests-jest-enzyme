@@ -1,9 +1,38 @@
 //colors
+$dark-grey: #222;
+$grey: #666;
+$light-grey: #f7f7f7;
+$blue: #1c88bf;
+$salotos: #02ccba;
+$blue-ligh: rgb(46,61,73);
 
+//font sizes
+$l-font-size: 1.8rem;
+$s-font-size: 1.4rem;
 
-// Sizes;
+// Sizes for spacing;
 $m-size: 1.6rem;
 $l-size: 3.2rem;
 $xl-size: 4.8rem;
 $s-size: 1.2rem;
 $desktop-breakpoint: 45rem;
+
+
+//base shadows
+
+$box-shadow: 12px 12px 25px 0 rgba(46,61,73, 0.8);
+$box-shadow-hover: 10px 10px 25px 0 rgba(46,61,73, 0.4);
+$box-shadow-input: 3px 3px 8px 0 rgba(46,61,73, 0.4);
+
+
+@mixin static-shadow($property) {
+    -webkit-box-shadow: $property;
+    box-shadow: $property;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+@mixin hover-shadow($property) {
+    -webkit-box-shadow: $property;
+    box-shadow: $property;
+}

@@ -2,22 +2,40 @@
 
 exports[`should render edit expense page correctly 1`] = `
 <div>
-  <ExpenseForm
-    existingExpense={
-      Object {
-        "amount": 195,
-        "createdAt": 0,
-        "description": "rent",
-        "id": "1",
-        "note": "first note",
-      }
-    }
-    stateObjToParent={[Function]}
-  />
-  <button
-    onClick={[Function]}
+  <div
+    className="page-header"
   >
-    Remove expense
-  </button>
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Edit expense
+      </h1>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <ExpenseForm
+      existingExpense={
+        Object {
+          "amount": 195,
+          "createdAt": 0,
+          "description": "rent",
+          "id": "1",
+          "note": "first note",
+        }
+      }
+      stateObjToParent={[Function]}
+    />
+    <button
+      className="button-grey"
+      onClick={[Function]}
+    >
+      Remove expense
+    </button>
+  </div>
 </div>
 `;

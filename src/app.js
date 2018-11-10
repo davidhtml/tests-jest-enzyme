@@ -7,6 +7,7 @@ import {Provider} from 'react-redux';
 import configStore from './store/config-store';
 import { startSetExpenses } from './actions/expenses';
 import { login, logout } from './actions/auth';
+import LoadingPage from './components/LoadingPage';
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
@@ -30,7 +31,7 @@ const renderApp = () => {
 };
 
 
-ReactDOM.render(<p>Loading...</p>, document.querySelector('#root'));
+ReactDOM.render(<LoadingPage />, document.querySelector('#root'));
 
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {

@@ -18,15 +18,23 @@ class EditExpensePage extends React.Component {
     render() {
         return (
             <div>
-                <ExpenseForm
-                    stateObjToParent={this.onEditExpense}
-                    existingExpense={this.props.expense}
-                 />
-                 <button
-                     onClick={this.onRemove}
-                >
-                     Remove expense
-                 </button>
+                <div className="page-header">
+                    <div className="content-container">
+                        <h1 className="page-header__title">Edit expense</h1>
+                    </div>
+                </div>
+                <div className="content-container">
+                    <ExpenseForm
+                        stateObjToParent={this.onEditExpense}
+                        existingExpense={this.props.expense}
+                     />
+                     <button
+                         onClick={this.onRemove}
+                         className="button-grey"
+                    >
+                         Remove expense
+                     </button>
+                 </div>
             </div>
         );
     }

@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === 'test') {
 
 
 module.exports = {
-    entry: './src/app.js',
+    entry: ['@babel/polyfill', './src/app.js'],
     output: {
         filename: '[name].js',
         path: BUILD_PATH
@@ -54,5 +54,5 @@ module.exports = {
         })
     ],
     devtool: 'source-map',
-    mode: 'development',
+    mode: 'production',
 };

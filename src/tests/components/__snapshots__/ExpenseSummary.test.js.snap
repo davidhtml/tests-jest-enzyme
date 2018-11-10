@@ -1,23 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should not render any expense if expenses are not provides 1`] = `
-<div>
-  <h4>
-    Here will be how many visible expenses we do have and what is total amount
-  </h4>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h2
+      className="page-header__title"
+    >
+      total of
+      <span>
+         
+        0
+         
+      </span>
+       
+      expenses
+       to pay
+      <span>
+         
+        $0.00
+         
+      </span>
+    </h2>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="button"
+        replace={false}
+        to="/create"
+      >
+        Add expense
+      </Link>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`should render expenses correcntly 1`] = `
-<div>
-  <h4>
-    Here will be how many visible expenses we do have and what is total amount
-  </h4>
-  <p>
-    total of 
-    1
-     expenses to pay 
-    $1.95
-  </p>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h2
+      className="page-header__title"
+    >
+      total of
+      <span>
+         
+        1
+         
+      </span>
+       
+      expense
+       to pay
+      <span>
+         
+        $1.95
+         
+      </span>
+    </h2>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="button"
+        replace={false}
+        to="/create"
+      >
+        Add expense
+      </Link>
+    </div>
+  </div>
 </div>
 `;

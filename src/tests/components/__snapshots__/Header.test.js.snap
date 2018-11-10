@@ -1,64 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Header correctly 1`] = `
-<header>
-  <h1>
-    Expensify.React App
-  </h1>
-  <p>
-    Short description
-  </p>
-  <NavLink
-    activeClassName="selected"
-    activeStyle={
-      Object {
-        "color": "#199",
-        "fontWeight": "bold",
-      }
-    }
-    aria-current="page"
-    to="/dashboard"
+<header
+  className="header"
+>
+  <div
+    className="content-container"
   >
-    Home
-  </NavLink>
-   
-  <br />
-  <NavLink
-    activeClassName="selected"
-    activeStyle={
-      Object {
-        "color": "#199",
-        "fontWeight": "bold",
-      }
-    }
-    aria-current="page"
-    exact={true}
-    to="/create"
-  >
-    Create expense
-  </NavLink>
-   
-  <br />
-  <NavLink
-    activeClassName="selected"
-    activeStyle={
-      Object {
-        "color": "#199",
-        "fontWeight": "bold",
-      }
-    }
-    aria-current="page"
-    exact={true}
-    to="/help"
-  >
-    Help
-  </NavLink>
-   
-  <br />
-  <button
-    onClick={[Function]}
-  >
-    Log out
-  </button>
+    <div
+      className="header__content"
+    >
+      <Link
+        className="header__title"
+        replace={false}
+        to="/dashboard"
+      >
+        <h1>
+          Expense.React app
+        </h1>
+      </Link>
+      <button
+        className="button button--link"
+        onClick={[Function]}
+      >
+        Log out
+      </button>
+    </div>
+  </div>
 </header>
 `;

@@ -1,38 +1,90 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render expenseList with expenses 1`] = `
-<div>
-  <ExpenseListItem
-    amount={195}
-    createdAt={0}
-    description="rent"
-    id="1"
-    key="1"
-    note="first note"
-  />
-  <ExpenseListItem
-    amount={330}
-    createdAt={-345600000}
-    description="gym"
-    id="2"
-    key="2"
-    note="second note"
-  />
-  <ExpenseListItem
-    amount={100}
-    createdAt={345600000}
-    description="credit card"
-    id="3"
-    key="3"
-    note="third note"
-  />
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Expenses
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Expense
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Amount
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <ExpenseListItem
+      amount={195}
+      createdAt={0}
+      description="rent"
+      id="1"
+      key="1"
+      note="first note"
+    />
+    <ExpenseListItem
+      amount={330}
+      createdAt={-345600000}
+      description="gym"
+      id="2"
+      key="2"
+      note="second note"
+    />
+    <ExpenseListItem
+      amount={100}
+      createdAt={345600000}
+      description="credit card"
+      id="3"
+      key="3"
+      note="third note"
+    />
+  </div>
 </div>
 `;
 
 exports[`should render notification when expense list is empty 1`] = `
-<div>
-  <p>
-    You have no expenses
-  </p>
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Expenses
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Expense
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Amount
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <div
+      className="list-item--message"
+    >
+      You have no expenses
+    </div>
+  </div>
 </div>
 `;

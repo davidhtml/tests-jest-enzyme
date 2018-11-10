@@ -1,0 +1,32 @@
+.header {
+    background: $salotos;
+}
+
+.header__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: $s-size 0;
+
+}
+
+.header__title {
+    color: #FFF;
+    text-decoration: none;
+    h1 {
+        margin: 0;
+        font-weight: 300;
+        text-shadow: 2px 2px 5px $blue-ligh;
+        -webkit-transition: text-shadow 0.3s;
+        transition: text-shadow 0.3s;
+        &:hover {
+            text-shadow: 1px 1px 2px $blue-ligh;
+        }
+    }
+}
