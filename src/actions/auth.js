@@ -1,9 +1,13 @@
 import {firebase, googleAuthProvider} from '../firebase/firebase'
 
 const startLogin = () => {
-    return () => {
-        return firebase.auth().signInWithPopup(googleAuthProvider);
-    }
+    googleAuthProvider.setCustomParameters({
+         'prompt': 'select_account'
+     });
+     return () => {
+         console.log('WHEN WE FIRE THIS EVENT?')
+         return firebase.auth().signInWithRedirect(googleAuthProvider);
+     };
 }
 
 const login = (uid) => ({
@@ -13,7 +17,7 @@ const login = (uid) => ({
 
 const startLogOut = () => {
     return () => {
-        return firebase.auth().signOut();
+        return firebase.auth().signOut()
     }
 }
 

@@ -11,6 +11,9 @@ import LoadingPage from './components/LoadingPage';
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+import '../public/images/bg.jpg'
+import '../public/images/favicon.png'
+import '../public/images/loader.gif'
 import 'react-dates/lib/css/_datepicker.css';
 import { firebase } from './firebase/firebase';
 
@@ -35,8 +38,7 @@ ReactDOM.render(<LoadingPage />, document.querySelector('#root'));
 
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
-        console.log('Logged in')
-        console.log('udi =>', user.uid)
+        console.log('if user is true=>',  user)
         store.dispatch(login(user.uid));
         store.dispatch(startSetExpenses())
         .then(() => {
@@ -45,8 +47,8 @@ firebase.auth().onAuthStateChanged(function (user) {
                 history.push('/dashboard');
             }
         })
-
     } else {
+        console.log('else close')
         store.dispatch(logout());
         renderApp();
         history.push('/')
