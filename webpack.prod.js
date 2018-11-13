@@ -9,7 +9,7 @@ const baseConfig = require('./webpack.common');
 module.exports = merge.smart(baseConfig, {
   entry: './src/app.js',
   output: {
-    filename: '[hash].bundle.js',
+    filename: 'bundle.js',
     path: paths.BUILD,
   },
   optimization: {
